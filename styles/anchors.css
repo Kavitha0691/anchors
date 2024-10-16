@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    background-color: rgb(198, 237, 196);
+    height: 100vh;
+}
+
+body {
+    margin: 0%;
+    flex-direction: column;
+    margin: 0%;
+    display: flex;
+    height: 100%;
+} 
+
+.header, .footer {
+     background-color: rgb(26, 226, 196);
+     padding: 32px;
+     text-align: center;
+}
+
+.header:hover .header_page-title {
+    color: rgb(251, 45, 8);
+}
+
+.header:hover + .main-content .sidebar {
+    color: rgb(127, 56, 56);
+    flex: 0 0 30%;
+
+}
+.header_page-title {
+    font-size: 4rem;
+    color: black;
+    margin: 0%;
+    text-align: center;
+}
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    min-height: 1500px;
+
+}
+.sidebar {
+    background-color: rgb(43, 162, 171);
+    flex: 0 0 25%;
+    color:black;
+    padding: 16px;
+    transition: all ease 1s;
+}
+
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 8px;
+}
+
+.sidebar a:hover {
+    color: rgb(52, 47, 45);
+    font-size: 1.2rem;
+}
+
+.sidebar h3:hover {
+    text-decoration: underline;
+}
+
+.sidebar .anchor_links:hover .sidebar_links {
+    max-height: 1000px;
+
+}
+
+.sidebar_links {
+     max-height: 0;
+     overflow: hidden;
+     transition: all ease 1s;
+}
+
+.main {
+    background-color: rgb(62, 133, 101);
+    flex: 1 0 auto;
+    padding: 24px;
+} 
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.submenu__trigger:hover + .submenu {
+    max-height: 1000px;
+}
+
+.submenu { 
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height_1s;
+}
+.main ul {
+    list-style-type:circle;
+}
+
+.Horizontal-list > li {
+    display: inline;
+}
+
+.flex_list {
+    counter-reset: dayscounter;
+  
+}
+.flex_list div {
+    margin: 8px; 
+}
+
+.flex_list div::before {
+      background-color: rgb(19, 22, 21);
+      counter-increment: dayscounter;
+      content: counter(dayscounter);
+      color: crimson;
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      margin-right: 8px;
+      text-align: center;
+
+}
+
+.flex_list_horizontal {
+    display: flex;
+}
+
+.flex_list_horizontal div {
+    padding: 16px;
+}
+
+
